@@ -10,3 +10,8 @@ main = do
     print $ (succ &&& show) (3::Int)
     print $ (arr succ &&& show) (3::Int)
     --        ^ (Int -> Int) -> Int -> Int
+    print $ (show >>> map succ) 4.3
+    print $ (show ^>> map succ) 4.3
+    print $ (show <<< map succ) [4,3]
+    print $ first show (2,3)
+    print $ second show (2,3)
